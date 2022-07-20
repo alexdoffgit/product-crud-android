@@ -1,10 +1,10 @@
-package com.alexdoff.productcrud
+package com.alexdoff.productcrud.dataobject
 
-data class Product(
+data class ProductPostRes(
     val created_at: String,
     val description: String,
+    val id: Int,
     val name: String,
-    val pid: String,
-    val price: String,
+    val price: Int,
     val updated_at: String
 )

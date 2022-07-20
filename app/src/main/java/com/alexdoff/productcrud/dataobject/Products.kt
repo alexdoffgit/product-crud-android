@@ -1,4 +1,4 @@
-package com.alexdoff.productcrud
+package com.alexdoff.productcrud.dataobject
 
 data class Products(
     val products: List<Product>,
