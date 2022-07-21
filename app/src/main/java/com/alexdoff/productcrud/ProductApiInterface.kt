@@ -8,17 +8,17 @@ import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.*
 
-interface ProductApi {
+interface ProductApiInterface {
     @GET("/product")
-    suspend fun getAllProduct(): Response<Products>
+    suspend fun getAllProduct(): Products
 
     @POST("/product")
-    suspend fun createProduct(@Body payload: ProductBody): Response<ProductPostRes>
+    suspend fun createProduct(@Body payload: ProductBody): ProductPostRes
 
     @PUT("/product/{id}")
     suspend fun updateProduct(@Path("id") id: String,
-                      @Body payload: ProductBody): Response<ProductUpdateRes>
+                      @Body payload: ProductBody): ProductUpdateRes
 
     @DELETE("/product/{id}")
-    suspend fun deleteProduct(@Path("id") id: String): Response<String>
+    suspend fun deleteProduct(@Path("id") id: String): String
 }
