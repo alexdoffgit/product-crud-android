@@ -6,11 +6,12 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetrofitInstance {
     private const val baseUrl = "https://procrud.my.id/api/"
 
-    val api: ProductApi by lazy {
-        Retrofit.Builder()
+    val api: ProductApiInterface by lazy {
+        Retrofit
+            .Builder()
             .baseUrl(baseUrl)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create(ProductApi::class.java)
+            .create(ProductApiInterface::class.java)
     }
 }
