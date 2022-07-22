@@ -1,5 +1,6 @@
+package com.alexdoff.productcrud.repository
+
 import com.alexdoff.productcrud.ProductApiInterface
-import com.alexdoff.productcrud.RetrofitInstance
 import com.alexdoff.productcrud.dataobject.ProductBody
 
 class ProductRepo(private val client: ProductApiInterface) {
