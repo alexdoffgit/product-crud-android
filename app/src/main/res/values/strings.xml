@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ProductCrud</string>
+    <string name="add_product_btn">Add new product</string>
 </resources>
