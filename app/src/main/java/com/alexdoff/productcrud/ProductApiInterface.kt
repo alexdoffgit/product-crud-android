@@ -9,7 +9,7 @@ import retrofit2.Response
 import retrofit2.http.*
 
 interface ProductApiInterface {
-    @GET("/product")
+    @GET("/api/product")
     suspend fun getAllProduct(): Response<Products>
 
     @POST("/product")

@@ -7,7 +7,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitInstance {
-    private const val baseUrl = "https://procrud.my.id/api/"
+    private const val baseUrl = "https://procrud.my.id/"
 
     private fun interceptor(): HttpLoggingInterceptor {
         val i = HttpLoggingInterceptor()

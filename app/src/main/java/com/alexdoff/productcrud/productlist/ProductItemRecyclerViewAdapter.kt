@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import com.alexdoff.productcrud.databinding.FragmentProductItemBinding
+import com.alexdoff.productcrud.dataobject.Product
+import com.alexdoff.productcrud.dataobject.Products
 
 import com.alexdoff.productcrud.productlist.placeholder.PlaceholderContent.PlaceholderItem
 
@@ -13,7 +15,7 @@ import com.alexdoff.productcrud.productlist.placeholder.PlaceholderContent.Place
  * TODO: Replace the implementation with code for your data type.
  */
 class ProductItemRecyclerViewAdapter(
-    private val values: List<PlaceholderItem>
+    private val values: Products
 ) : RecyclerView.Adapter<ProductItemRecyclerViewAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -29,17 +31,17 @@ class ProductItemRecyclerViewAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = values[position]
-        holder.idView.text = item.id
-        holder.contentView.text = item.content
+        val item = values.products[position]
+        holder.idView.text = item.name
+        holder.contentView.text = item.price
     }
 
-    override fun getItemCount(): Int = values.size
+    override fun getItemCount(): Int = values.products.size
 
     inner class ViewHolder(binding: FragmentProductItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        val idView: TextView = binding.itemNumber
-        val contentView: TextView = binding.content
+        val idView: TextView = binding.namaProduk
+        val contentView: TextView = binding.hargaProduk
 
         override fun toString(): String {
             return super.toString() + " '" + contentView.text + "'"
