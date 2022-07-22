@@ -2,21 +2,4 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/my_nav"
-    app:startDestination="@id/listProduct">
-
-    <fragment
-        android:id="@+id/listProduct"
-        android:name="com.alexdoff.productcrud.ListProduct"
-        android:label="fragment_list_product"
-        tools:layout="@layout/fragment_list_product" >
-        <action
-            android:id="@+id/action_listProduct_to_product"
-            app:destination="@id/product" />
-    </fragment>
-    <fragment
-        android:id="@+id/product"
-        android:name="com.alexdoff.productcrud.Product"
-        android:label="fragment_product"
-        tools:layout="@layout/fragment_product" />
-</navigation>
+    android:id="@+id/my_nav"/>
